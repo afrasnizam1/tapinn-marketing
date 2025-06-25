@@ -6,72 +6,261 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="TapInn helps you meet up with friends or discover new events in your city. Plan, invite, RSVP, and connect—all in one beautifully simple app.">
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="site-header">
     <nav class="navbar">
       <span class="logo">TapInn</span>
-      <a href="#join" class="cta-header">Get Early Access</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#join" class="cta-header">Get Early Access</a></li>
+      </ul>
     </nav>
     <div class="hero">
       <div class="hero-text">
-        <h1>Meet Up, Made Simple</h1>
-        <p>Discover events, invite friends, and make plans happen—spontaneously or ahead of time.</p>
+        <h1>
+          <span class="fade-in">Meet Up,</span>
+          <br>
+          <span class="highlight fade-in-delay">Made Simple</span>
+        </h1>
+        <p class="fade-in-delay">TapInn helps you discover, create, and join real-life events—effortlessly.</p>
         <a href="#join" class="cta-main">Join the Waitlist</a>
       </div>
-      <img src="app-mockup.png" alt="TapInn App Preview" class="hero-img">
+      <!-- SVG App Mockup Placeholder -->
+      <div class="hero-img fade-up" aria-label="App Preview">
+        <svg width="340" height="600" viewBox="0 0 340 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="340" height="600" rx="36" fill="#e7eeff"/>
+          <rect x="22" y="60" width="296" height="480" rx="24" fill="#fff"/>
+          <rect x="90" y="30" width="160" height="14" rx="7" fill="#d2e3fa"/>
+          <rect x="120" y="560" width="100" height="16" rx="8" fill="#d2e3fa"/>
+          <rect x="62" y="100" width="216" height="30" rx="15" fill="#f4f8ff"/>
+          <rect x="62" y="150" width="216" height="16" rx="8" fill="#e7eeff"/>
+          <rect x="62" y="180" width="216" height="16" rx="8" fill="#e7eeff"/>
+          <rect x="62" y="220" width="140" height="16" rx="8" fill="#e7eeff"/>
+          <rect x="62" y="260" width="216" height="16" rx="8" fill="#e7eeff"/>
+          <rect x="62" y="300" width="216" height="16" rx="8" fill="#e7eeff"/>
+          <rect x="62" y="340" width="170" height="16" rx="8" fill="#e7eeff"/>
+          <rect x="62" y="380" width="216" height="16" rx="8" fill="#e7eeff"/>
+          <rect x="62" y="420" width="216" height="16" rx="8" fill="#e7eeff"/>
+          Sorry, your browser does not support inline SVG.
+        </svg>
+      </div>
+    </div>
+    <div class="trusted-by">
+      <span class="trusted-title">As featured in</span>
+      <!-- SVG Logo Placeholders -->
+      <svg class="trusted-logo" width="90" height="28" viewBox="0 0 90 28" fill="none" aria-label="TechCrunch">
+        <rect width="90" height="28" rx="6" fill="#d2e3fa"/>
+        <text x="14" y="19" font-size="14" fill="#5e7cff" font-family="Inter,sans-serif" font-weight="bold">TechNews</text>
+      </svg>
+      <svg class="trusted-logo" width="90" height="28" viewBox="0 0 90 28" fill="none" aria-label="ProductHunt">
+        <rect width="90" height="28" rx="6" fill="#d2e3fa"/>
+        <text x="8" y="19" font-size="14" fill="#5e7cff" font-family="Inter,sans-serif" font-weight="bold">ProductHub</text>
+      </svg>
+      <svg class="trusted-logo" width="90" height="28" viewBox="0 0 90 28" fill="none" aria-label="Mashable">
+        <rect width="90" height="28" rx="6" fill="#d2e3fa"/>
+        <text x="22" y="19" font-size="14" fill="#5e7cff" font-family="Inter,sans-serif" font-weight="bold">DailyApp</text>
+      </svg>
     </div>
   </header>
 
   <main>
     <section class="about" id="about">
-      <h2>What is TapInn?</h2>
-      <p>
-        TapInn is a new way to make real-life plans. Whether you want to catch up with friends, find something fun nearby, or get a group together last minute—TapInn makes it easy. No cluttered group chats or endless texts. Just simple, spontaneous meetups.
-      </p>
+      <div class="about-inner">
+        <div class="about-text">
+          <h2>What is TapInn?</h2>
+          <p>
+            TapInn is the easiest way to make real-life plans. Whether you’re gathering friends, discovering local events, or organizing a spontaneous outing, TapInn streamlines every step—from planning to carpooling and RSVPing. Say goodbye to group chat chaos.
+          </p>
+          <ul class="about-list">
+            <li><span>✨</span> <b>Plan instantly</b> – Create events in seconds</li>
+            <li><span>🎯</span> <b>Find your crowd</b> – Discover events that match your interests</li>
+            <li><span>👍</span> <b>Reliable meetups</b> – See who actually shows up</li>
+          </ul>
+        </div>
+        <!-- SVG About Illustration Placeholder -->
+        <div class="about-img" aria-label="About TapInn">
+          <svg width="220" height="180" viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="220" height="180" rx="28" fill="#e7eeff"/>
+            <circle cx="110" cy="75" r="45" fill="#d2e3fa"/>
+            <rect x="65" y="140" width="90" height="20" rx="10" fill="#f4f8ff"/>
+            <rect x="90" y="110" width="40" height="12" rx="6" fill="#fff"/>
+            Sorry, your browser does not support inline SVG.
+          </svg>
+        </div>
+      </div>
     </section>
 
     <section class="features" id="features">
       <h2>Why You'll Love TapInn</h2>
       <div class="features-grid">
         <div class="feature-card">
+          <!-- Event icon SVG -->
+          <svg height="42" width="42" viewBox="0 0 42 42" fill="none">
+            <rect x="2" y="8" width="38" height="32" rx="6" fill="#e7eeff"/>
+            <rect x="9" y="2" width="6" height="12" rx="3" fill="#5e7cff"/>
+            <rect x="27" y="2" width="6" height="12" rx="3" fill="#5e7cff"/>
+            <rect x="12" y="20" width="18" height="3" rx="1.5" fill="#b3cdfc"/>
+          </svg>
           <h3>Effortless Event Creation</h3>
-          <p>Pick a time and place, add a few details, and invite friends in seconds.</p>
+          <p>Pick a time and place, add details, and invite friends or the public in seconds.</p>
         </div>
         <div class="feature-card">
+          <!-- Invite icon SVG -->
+          <svg height="42" width="42" viewBox="0 0 42 42" fill="none">
+            <circle cx="21" cy="21" r="19" fill="#e7eeff"/>
+            <rect x="11" y="18" width="20" height="12" rx="5" fill="#5e7cff"/>
+            <rect x="17" y="13" width="8" height="8" rx="4" fill="#fff"/>
+          </svg>
           <h3>Instant Invites</h3>
-          <p>Send invites right from the app—even to contacts who don’t use TapInn yet.</p>
+          <p>Send invites with one tap—even to contacts who don’t use TapInn yet.</p>
         </div>
         <div class="feature-card">
+          <!-- Discover icon SVG -->
+          <svg height="42" width="42" viewBox="0 0 42 42" fill="none">
+            <circle cx="21" cy="21" r="19" fill="#e7eeff"/>
+            <path d="M31 31L25.2 25.2" stroke="#5e7cff" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="18" cy="18" r="7" stroke="#5e7cff" stroke-width="3" fill="#fff"/>
+          </svg>
           <h3>Smart Discovery</h3>
-          <p>See open events in your area, filtered by what you care about—food, music, sports, and more.</p>
+          <p>Browse open events nearby—filtered by your interests.</p>
         </div>
         <div class="feature-card">
+          <!-- RSVP icon SVG -->
+          <svg height="42" width="42" viewBox="0 0 42 42" fill="none">
+            <rect x="7" y="11" width="28" height="20" rx="6" fill="#e7eeff"/>
+            <rect x="14" y="18" width="14" height="6" rx="3" fill="#5e7cff"/>
+          </svg>
           <h3>Simple RSVPs</h3>
-          <p>Let everyone know if you’re in with one tap. No more “Did you see my text?”</p>
+          <p>No more “Did you see my text?”—everyone’s plan in one spot.</p>
         </div>
         <div class="feature-card">
-          <h3>Reliable Plans</h3>
-          <p>See who actually shows up. TapInn helps you plan with people you trust.</p>
+          <!-- Carpool icon SVG -->
+          <svg height="42" width="42" viewBox="0 0 42 42" fill="none">
+            <rect x="5" y="17" width="32" height="14" rx="7" fill="#e7eeff"/>
+            <rect x="13" y="10" width="16" height="12" rx="6" fill="#5e7cff"/>
+            <circle cx="14" cy="32" r="4" fill="#fff"/>
+            <circle cx="30" cy="32" r="4" fill="#fff"/>
+          </svg>
+          <h3>Carpool & Rides</h3>
+          <p>Coordinate rides, offer seats, and save money together.</p>
         </div>
+        <div class="feature-card">
+          <!-- Trust icon SVG -->
+          <svg height="42" width="42" viewBox="0 0 42 42" fill="none">
+            <circle cx="21" cy="21" r="19" fill="#e7eeff"/>
+            <path d="M14 24l5 5 9-12" stroke="#5e7cff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3>Reliability Scores</h3>
+          <p>Know who’s reliable—plan with people you trust.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+      <h2>What People Are Saying</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p>“Finally, an app that makes spontaneous plans actually happen. I use TapInn almost every weekend.”</p>
+          <span>- Jamie L.</span>
+        </div>
+        <div class="testimonial-card">
+          <p>“The carpool feature is genius. Our group never has to worry about rides again.”</p>
+          <span>- Priya S.</span>
+        </div>
+        <div class="testimonial-card">
+          <p>“I’ve met so many new friends through open events. TapInn is a must-have!”</p>
+          <span>- Chris M.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-grid">
+        <details>
+          <summary>Is TapInn free to use?</summary>
+          <div>Yes! TapInn is free to download and use for everyone.</div>
+        </details>
+        <details>
+          <summary>Do my friends need the app to get invites?</summary>
+          <div>No. You can invite anyone using their phone number—they’ll get a text with your event details.</div>
+        </details>
+        <details>
+          <summary>What platforms is TapInn available on?</summary>
+          <div>TapInn will be available on both iOS and Android at launch.</div>
+        </details>
+        <details>
+          <summary>How do reliability scores work?</summary>
+          <div>Reliability is earned by showing up! Frequent cancellations or no-shows lower your score, while attending events keeps it high.</div>
+        </details>
       </div>
     </section>
 
     <section class="get-app" id="join">
       <h2>Be The First To Tap In</h2>
       <p>
-        TapInn is launching soon on iOS and Android. Join our waitlist to get early access and updates!
+        TapInn is launching soon on iOS and Android. Join our waitlist for early access and updates!
       </p>
       <form class="waitlist-form">
         <input type="email" placeholder="Your email" required>
         <button type="submit">Notify Me</button>
       </form>
+      <div class="app-links">
+        <!-- SVG App Store badges as placeholder -->
+        <svg class="store-badge" width="135" height="42" viewBox="0 0 135 42" fill="none">
+          <rect width="135" height="42" rx="11" fill="#19191A"/>
+          <text x="20" y="27" font-size="18" fill="#fff" font-family="Inter,sans-serif" font-weight="bold">App Store</text>
+        </svg>
+        <svg class="store-badge" width="135" height="42" viewBox="0 0 135 42" fill="none">
+          <rect width="135" height="42" rx="11" fill="#19191A"/>
+          <text x="15" y="27" font-size="18" fill="#fff" font-family="Inter,sans-serif" font-weight="bold">Google Play</text>
+        </svg>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>Questions or feedback? <a href="mailto:hello@tapinnapp.com">Contact us</a></p>
-    <p class="copyright">&copy; 2025 TapInn</p>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#faq">FAQ</a>
+        <a href="mailto:hello@tapinnapp.com">Contact</a>
+      </div>
+      <div class="footer-social">
+        <!-- SVG Social icons as placeholders -->
+        <a href="#" aria-label="Twitter">
+          <svg height="24" width="24" viewBox="0 0 24 24" fill="#7ae4ff">
+            <circle cx="12" cy="12" r="12" fill="#e7eeff"/>
+            <path d="M19 8.3c-.5.2-1 .4-1.4.4.5-.3.9-.8 1.1-1.3-.5.3-1 .5-1.6.7-.5-.5-1.2-.8-1.9-.8-1.5 0-2.7 1.2-2.7 2.7 0 .2 0 .5.1.7C8.2 10.4 6.1 9.2 4.7 7.4c-.2.4-.3.8-.3 1.2 0 .9.5 1.7 1.2 2.2-.4 0-.7-.1-1-.2v.1c0 1.2.8 2.2 1.9 2.4-.2.1-.4.1-.6.1-.1 0-.2 0-.3-.1.2.7 1 1.3 1.9 1.3-0.7.5-1.6.8-2.5.8-.2 0-.4 0-.5-.1.9.6 2.1 1 3.2 1 3.9 0 6-3.2 6-6v-.3c.4-.3.8-.7 1.1-1.1z"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <svg height="24" width="24" viewBox="0 0 24 24" fill="#7ae4ff">
+            <circle cx="12" cy="12" r="12" fill="#e7eeff"/>
+            <rect x="6" y="6" width="12" height="12" rx="4" fill="#fff"/>
+            <circle cx="12" cy="12" r="3" fill="#7ae4ff"/>
+            <circle cx="16" cy="8" r="1" fill="#5e7cff"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="Facebook">
+          <svg height="24" width="24" viewBox="0 0 24 24" fill="#7ae4ff">
+            <circle cx="12" cy="12" r="12" fill="#e7eeff"/>
+            <rect x="10" y="8" width="2.5" height="8" rx="1.25" fill="#5e7cff"/>
+            <rect x="8.5" y="10.5" width="7" height="2.5" rx="1.25" fill="#5e7cff"/>
+          </svg>
+        </a>
+      </div>
+      <div class="footer-copy">
+        &copy; 2025 TapInn. All rights reserved.
+      </div>
+    </div>
   </footer>
 </body>
 </html>
