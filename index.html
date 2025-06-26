@@ -71,7 +71,7 @@
     }
     .nav-links {
       display: flex;
-      gap: 2.4rem;
+      gap: 2.1rem;
       align-items: center;
     }
     .nav-links a {
@@ -228,6 +228,36 @@
       background: #fff;
     }
 
+    /* About Us */
+    .about-section {
+      max-width: 900px;
+      margin: 0 auto 3rem auto;
+      padding: 2rem 2vw 2.5rem 2vw;
+      background: rgba(255,255,255,0.91);
+      border-radius: 1.5rem;
+      box-shadow: 0 2px 14px rgba(129,94,255,0.08);
+      border: 1.2px solid #e0e7ff;
+      text-align: center;
+    }
+    .about-title {
+      font-size: 2rem;
+      color: #2979FF;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .about-text {
+      font-size: 1.15rem;
+      color: #444d5a;
+      margin-bottom: 0.5em;
+      line-height: 1.7;
+    }
+    .about-team {
+      margin-top: 2em;
+      font-size: 1rem;
+      color: #7a8599;
+      letter-spacing: 0.02em;
+    }
+
     /* Features */
     .features-section {
       max-width: 1100px;
@@ -262,16 +292,6 @@
     .feature-card:hover {
       transform: translateY(-5px) scale(1.02);
       box-shadow: 0 8px 30px rgba(129,94,255,0.14);
-    }
-    .feature-card .icon {
-      width: 54px;
-      height: 54px;
-      margin-bottom: 1em;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg,#e7eeff 0%,#b0afff 100%);
     }
     .feature-card h3 {
       color: #2979FF;
@@ -363,6 +383,81 @@
       margin-bottom: 0.5em;
     }
 
+    /* Contact Us */
+    .contact-section {
+      max-width: 900px;
+      margin: 3rem auto 3rem auto;
+      padding: 2rem 2vw 2.5rem 2vw;
+      background: rgba(255,255,255,0.92);
+      border-radius: 1.5rem;
+      box-shadow: 0 2px 14px rgba(129,94,255,0.08);
+      border: 1.2px solid #e0e7ff;
+      text-align: center;
+    }
+    .contact-title {
+      font-size: 2rem;
+      color: #2979FF;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .contact-text {
+      font-size: 1.15rem;
+      color: #444d5a;
+      margin-bottom: 1.5em;
+      line-height: 1.7;
+    }
+    .contact-form {
+      max-width: 470px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+      align-items: stretch;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      border: 1.2px solid #e0e7ff;
+      border-radius: 14px;
+      padding: 0.75em 1em;
+      font-size: 1rem;
+      font-family: inherit;
+      background: #f8fbff;
+      outline: none;
+      transition: border 0.16s;
+      resize: none;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border: 1.2px solid #2979FF;
+    }
+    .contact-form button {
+      background: linear-gradient(90deg, #2979FF 0%, #4e9dff 100%);
+      color: #fff;
+      border: none;
+      border-radius: 14px;
+      padding: 0.8em 1.7em;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.18s;
+      font-family: inherit;
+      box-shadow: 0 2px 10px rgba(41,121,255,0.07);
+      margin-top: 0.3em;
+    }
+    .contact-form button:hover {
+      background: linear-gradient(90deg, #215ddb 0%, #2979FF 80%);
+    }
+    .contact-info {
+      margin-top: 1.8em;
+      color: #7a8599;
+      font-size: 1rem;
+    }
+    .contact-info a {
+      color: #2979FF;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+
     /* Waitlist */
     .waitlist-section {
       max-width: 500px;
@@ -446,6 +541,10 @@
       .hero-illus {
         margin-bottom: 1.8rem;
       }
+      .about-section,
+      .contact-section {
+        padding: 1.3rem 0.4rem 1.5rem 0.4rem;
+      }
     }
     @media (max-width: 600px) {
       .navbar { font-size: 1rem; padding: 1rem 0.7rem 0.7rem 0.7rem; }
@@ -455,6 +554,10 @@
       .tapinn-logo { width: 62px; height: 62px;}
       .tapinn-logo svg { width: 36px; height: 36px;}
       .features-section { padding: 0 0.5rem; }
+      .about-section,
+      .contact-section {
+        padding: 1.1rem 0.1rem 1.1rem 0.1rem;
+      }
     }
   </style>
 </head>
@@ -473,9 +576,11 @@
       TapInn
     </div>
     <div class="nav-links">
+      <a href="#about">About Us</a>
       <a href="#features">Features</a>
       <a href="#testimonials">Testimonials</a>
       <a href="#faq">FAQ</a>
+      <a href="#contact" class="">Contact</a>
       <a href="#waitlist" class="cta-nav">Join Waitlist</a>
     </div>
   </nav>
@@ -511,50 +616,47 @@
       </svg>
     </div>
   </section>
+
+  <!-- ABOUT US -->
+  <section class="about-section" id="about">
+    <div class="about-title">About Us</div>
+    <div class="about-text">
+      TapInn was born out of a simple idea: making real-world connections and spontaneous meetups easy and enjoyable. We believe that the best moments in life happen when friends, old and new, can get together effortlessly, without the stress of endless group chats and planning.
+    </div>
+    <div class="about-text">
+      Our team is passionate about technology, community, and creating delightful user experiences. TapInn is designed for everyone—whether you're organizing a big event, looking for new friends with shared interests, or just want to grab coffee with someone nearby.
+    </div>
+    <div class="about-team">
+      Built by a small, diverse team who truly love bringing people together.<br>
+      We're excited to help you Tap In!
+    </div>
+  </section>
   
   <!-- FEATURES -->
   <section class="features-section" id="features">
     <div class="features-title">Why You'll Love TapInn</div>
     <div class="features-grid">
       <div class="feature-card">
-        <div class="icon">
-          <svg width="36" height="36" viewBox="0 0 36 36"><rect x="4" y="8" width="28" height="20" rx="6" fill="#b0afff"/><rect x="11" y="4" width="5" height="12" rx="2.5" fill="#2979FF"/><rect x="20" y="4" width="5" height="12" rx="2.5" fill="#2979FF"/><rect x="14" y="19" width="8" height="3" rx="1.5" fill="#fff"/></svg>
-        </div>
         <h3>Effortless Event Creation</h3>
         <p>Pick a time and place, add details, and invite friends or the public in seconds.</p>
       </div>
       <div class="feature-card">
-        <div class="icon">
-          <svg width="36" height="36" viewBox="0 0 36 36"><circle cx="18" cy="18" r="15" fill="#b0afff"/><rect x="8" y="16" width="20" height="10" rx="5" fill="#2979FF"/><rect x="14" y="10" width="8" height="8" rx="4" fill="#fff"/></svg>
-        </div>
         <h3>Instant Invites</h3>
         <p>Send invites with one tap—even to contacts who don’t use TapInn yet.</p>
       </div>
       <div class="feature-card">
-        <div class="icon">
-          <svg width="36" height="36" viewBox="0 0 36 36"><circle cx="18" cy="18" r="15" fill="#b0afff"/><path d="M27 27L21.2 21.2" stroke="#2979FF" stroke-width="3" stroke-linecap="round"/><circle cx="15" cy="15" r="7" stroke="#2979FF" stroke-width="3" fill="#fff"/></svg>
-        </div>
         <h3>Smart Discovery</h3>
         <p>Browse open events nearby—filtered by your interests.</p>
       </div>
       <div class="feature-card">
-        <div class="icon">
-          <svg width="36" height="36" viewBox="0 0 36 36"><rect x="7" y="9" width="22" height="16" rx="6" fill="#b0afff"/><rect x="12" y="15" width="12" height="5" rx="2.5" fill="#2979FF"/></svg>
-        </div>
         <h3>Simple RSVPs</h3>
         <p>No more “Did you see my text?”—everyone’s plan in one spot.</p>
       </div>
       <div class="feature-card">
-        <div class="icon">
-          <svg width="36" height="36" viewBox="0 0 36 36"><rect x="4" y="13" width="28" height="10" rx="5" fill="#b0afff"/><rect x="10" y="6" width="16" height="10" rx="5" fill="#2979FF"/><circle cx="11" cy="26" r="3" fill="#fff"/><circle cx="25" cy="26" r="3" fill="#fff"/></svg>
-        </div>
         <h3>Carpool & Rides</h3>
         <p>Coordinate rides, offer seats, and save money together.</p>
       </div>
       <div class="feature-card">
-        <div class="icon">
-          <svg width="36" height="36" viewBox="0 0 36 36"><circle cx="18" cy="18" r="15" fill="#b0afff"/><path d="M12 21l4 4 7-10" stroke="#2979FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
         <h3>Reliability Scores</h3>
         <p>Know who’s reliable—plan with people you trust.</p>
       </div>
@@ -604,6 +706,23 @@
         <summary>How do I join the waitlist?</summary>
         <div>Just enter your email below and we’ll notify you when TapInn launches in your area!</div>
       </details>
+    </div>
+  </section>
+
+  <!-- CONTACT US -->
+  <section class="contact-section" id="contact">
+    <div class="contact-title">Contact Us</div>
+    <div class="contact-text">
+      We'd love to hear from you! For feedback, questions, partnership opportunities, or just to say hello, fill out the form below or reach out by email.
+    </div>
+    <form class="contact-form" autocomplete="off" onsubmit="event.preventDefault();alert('Thank you for contacting us! We will get back to you soon.');">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="contact-info">
+      Or email us directly: <a href="mailto:hello@tapinnapp.com">hello@tapinnapp.com</a>
     </div>
   </section>
   
