@@ -1,266 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>TapInn – Meet Up, Made Simple</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="TapInn helps you meet up with friends or discover new events in your city. Plan, invite, RSVP, and connect—all in one beautifully simple app.">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>TapInn – Connect. Meet. Tap In.</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="TapInn helps you instantly meet up with friends or new faces nearby. Create, discover, and join events, all in one tap." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      background: linear-gradient(180deg, #f8faff 0%, #e6eaff 65%, #e0e7ff 100%);
+      min-height: 100vh;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .hero-card {
+      margin-top: 5vh;
+      background: rgba(255,255,255,0.85);
+      border-radius: 32px;
+      box-shadow: 0 8px 40px 0 rgba(41,121,255,0.12), 0 1.5px 6px 0 rgba(129,94,255,0.05);
+      max-width: 400px;
+      width: 90vw;
+      padding: 2.5rem 2rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      backdrop-filter: blur(12px);
+    }
+    .tapinn-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg,#815EFF 0%, #2979FF 100%);
+      border-radius: 50%;
+      width: 85px;
+      height: 85px;
+      margin-bottom: 1.2rem;
+      box-shadow: 0 4px 18px rgba(129,94,255,0.13);
+    }
+    .tapinn-logo svg {
+      width: 48px;
+      height: 48px;
+      display: block;
+    }
+    .brand-title {
+      font-size: 2.1rem;
+      font-weight: 700;
+      margin: 0.1em 0 0.15em 0;
+      color: #222;
+      letter-spacing: -0.5px;
+      text-align: center;
+    }
+    .brand-tagline {
+      color: #2979FF;
+      font-size: 1.12rem;
+      font-weight: 500;
+      margin-bottom: 2.2rem;
+      text-align: center;
+      letter-spacing: 0.01em;
+    }
+    .headline {
+      font-size: 1.45rem;
+      color: #222;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 0.25em;
+      margin-top: 0.5em;
+      letter-spacing: -0.5px;
+    }
+    .subheadline {
+      color: #888;
+      font-size: 1.05rem;
+      text-align: center;
+      margin-bottom: 2.2em;
+      font-weight: 400;
+    }
+    .cta-main {
+      background: #2979FF;
+      color: #fff;
+      border: none;
+      border-radius: 16px;
+      padding: 1em 2.6em;
+      font-size: 1.09rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      margin: 1.2em 0 0.3em 0;
+      box-shadow: 0 2px 12px 0 rgba(41,121,255,0.12);
+      cursor: pointer;
+      transition: background 0.18s;
+      outline: none;
+    }
+    .cta-main:hover, .cta-main:focus {
+      background: #215ddb;
+    }
+    .features-list {
+      margin: 2.7em 0 0 0;
+      padding: 0;
+      list-style: none;
+      width: 100%;
+    }
+    .features-list li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.5em;
+      font-size: 1.04rem;
+      line-height: 1.3;
+      color: #333;
+    }
+    .features-list b {
+      color: #2979FF;
+      font-weight: 600;
+      margin-right: 0.3em;
+    }
+    .features-list .icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #e7eeff;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      margin-right: 0.75em;
+      font-size: 1.23em;
+      color: #2979FF;
+      flex-shrink: 0;
+    }
+    /* Footer */
+    .footer {
+      margin-top: 5vh;
+      font-size: 1rem;
+      color: #7a8599;
+      text-align: center;
+      width: 100%;
+      padding-bottom: 2em;
+      letter-spacing: 0.01em;
+    }
+    .footer a {
+      color: #2979FF;
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      .hero-card {
+        padding: 1.5rem 0.5rem;
+      }
+      .brand-title { font-size: 1.6rem; }
+      .headline { font-size: 1.09rem; }
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <nav class="navbar">
-      <span class="logo">TapInn</span>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#join" class="cta-header">Get Early Access</a></li>
-      </ul>
-    </nav>
-    <div class="hero">
-      <div class="hero-text">
-        <h1>
-          <span class="fade-in">Meet Up,</span>
-          <br>
-          <span class="highlight fade-in-delay">Made Simple</span>
-        </h1>
-        <p class="fade-in-delay">TapInn helps you discover, create, and join real-life events—effortlessly.</p>
-        <a href="#join" class="cta-main">Join the Waitlist</a>
-      </div>
-      <!-- SVG App Mockup Placeholder -->
-      <div class="hero-img fade-up" aria-label="App Preview">
-        <svg width="340" height="600" viewBox="0 0 340 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="340" height="600" rx="36" fill="#e7eeff"/>
-          <rect x="22" y="60" width="296" height="480" rx="24" fill="#fff"/>
-          <rect x="90" y="30" width="160" height="14" rx="7" fill="#d2e3fa"/>
-          <rect x="120" y="560" width="100" height="16" rx="8" fill="#d2e3fa"/>
-          <rect x="62" y="100" width="216" height="30" rx="15" fill="#f4f8ff"/>
-          <rect x="62" y="150" width="216" height="16" rx="8" fill="#e7eeff"/>
-          <rect x="62" y="180" width="216" height="16" rx="8" fill="#e7eeff"/>
-          <rect x="62" y="220" width="140" height="16" rx="8" fill="#e7eeff"/>
-          <rect x="62" y="260" width="216" height="16" rx="8" fill="#e7eeff"/>
-          <rect x="62" y="300" width="216" height="16" rx="8" fill="#e7eeff"/>
-          <rect x="62" y="340" width="170" height="16" rx="8" fill="#e7eeff"/>
-          <rect x="62" y="380" width="216" height="16" rx="8" fill="#e7eeff"/>
-          <rect x="62" y="420" width="216" height="16" rx="8" fill="#e7eeff"/>
-          Sorry, your browser does not support inline SVG.
-        </svg>
-      </div>
-    </div>
-    <div class="trusted-by">
-      <span class="trusted-title">As featured in</span>
-      <!-- SVG Logo Placeholders -->
-      <svg class="trusted-logo" width="90" height="28" viewBox="0 0 90 28" fill="none" aria-label="TechCrunch">
-        <rect width="90" height="28" rx="6" fill="#d2e3fa"/>
-        <text x="14" y="19" font-size="14" fill="#5e7cff" font-family="Inter,sans-serif" font-weight="bold">TechNews</text>
-      </svg>
-      <svg class="trusted-logo" width="90" height="28" viewBox="0 0 90 28" fill="none" aria-label="ProductHunt">
-        <rect width="90" height="28" rx="6" fill="#d2e3fa"/>
-        <text x="8" y="19" font-size="14" fill="#5e7cff" font-family="Inter,sans-serif" font-weight="bold">ProductHub</text>
-      </svg>
-      <svg class="trusted-logo" width="90" height="28" viewBox="0 0 90 28" fill="none" aria-label="Mashable">
-        <rect width="90" height="28" rx="6" fill="#d2e3fa"/>
-        <text x="22" y="19" font-size="14" fill="#5e7cff" font-family="Inter,sans-serif" font-weight="bold">DailyApp</text>
-      </svg>
-    </div>
-  </header>
-
   <main>
-    <section class="about" id="about">
-      <div class="about-inner">
-        <div class="about-text">
-          <h2>What is TapInn?</h2>
-          <p>
-            TapInn is the easiest way to make real-life plans. Whether you’re gathering friends, discovering local events, or organizing a spontaneous outing, TapInn streamlines every step—from planning to carpooling and RSVPing. Say goodbye to group chat chaos.
-          </p>
-          <ul class="about-list">
-            <li><span>✨</span> <b>Plan instantly</b> – Create events in seconds</li>
-            <li><span>🎯</span> <b>Find your crowd</b> – Discover events that match your interests</li>
-            <li><span>👍</span> <b>Reliable meetups</b> – See who actually shows up</li>
-          </ul>
-        </div>
-        <!-- SVG About Illustration Placeholder -->
-        <div class="about-img" aria-label="About TapInn">
-          <svg width="220" height="180" viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="220" height="180" rx="28" fill="#e7eeff"/>
-            <circle cx="110" cy="75" r="45" fill="#d2e3fa"/>
-            <rect x="65" y="140" width="90" height="20" rx="10" fill="#f4f8ff"/>
-            <rect x="90" y="110" width="40" height="12" rx="6" fill="#fff"/>
-            Sorry, your browser does not support inline SVG.
-          </svg>
-        </div>
-      </div>
-    </section>
-
-    <section class="features" id="features">
-      <h2>Why You'll Love TapInn</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <!-- Event icon SVG -->
-          <svg height="42" width="42" viewBox="0 0 42 42" fill="none">
-            <rect x="2" y="8" width="38" height="32" rx="6" fill="#e7eeff"/>
-            <rect x="9" y="2" width="6" height="12" rx="3" fill="#5e7cff"/>
-            <rect x="27" y="2" width="6" height="12" rx="3" fill="#5e7cff"/>
-            <rect x="12" y="20" width="18" height="3" rx="1.5" fill="#b3cdfc"/>
-          </svg>
-          <h3>Effortless Event Creation</h3>
-          <p>Pick a time and place, add details, and invite friends or the public in seconds.</p>
-        </div>
-        <div class="feature-card">
-          <!-- Invite icon SVG -->
-          <svg height="42" width="42" viewBox="0 0 42 42" fill="none">
-            <circle cx="21" cy="21" r="19" fill="#e7eeff"/>
-            <rect x="11" y="18" width="20" height="12" rx="5" fill="#5e7cff"/>
-            <rect x="17" y="13" width="8" height="8" rx="4" fill="#fff"/>
-          </svg>
-          <h3>Instant Invites</h3>
-          <p>Send invites with one tap—even to contacts who don’t use TapInn yet.</p>
-        </div>
-        <div class="feature-card">
-          <!-- Discover icon SVG -->
-          <svg height="42" width="42" viewBox="0 0 42 42" fill="none">
-            <circle cx="21" cy="21" r="19" fill="#e7eeff"/>
-            <path d="M31 31L25.2 25.2" stroke="#5e7cff" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="18" cy="18" r="7" stroke="#5e7cff" stroke-width="3" fill="#fff"/>
-          </svg>
-          <h3>Smart Discovery</h3>
-          <p>Browse open events nearby—filtered by your interests.</p>
-        </div>
-        <div class="feature-card">
-          <!-- RSVP icon SVG -->
-          <svg height="42" width="42" viewBox="0 0 42 42" fill="none">
-            <rect x="7" y="11" width="28" height="20" rx="6" fill="#e7eeff"/>
-            <rect x="14" y="18" width="14" height="6" rx="3" fill="#5e7cff"/>
-          </svg>
-          <h3>Simple RSVPs</h3>
-          <p>No more “Did you see my text?”—everyone’s plan in one spot.</p>
-        </div>
-        <div class="feature-card">
-          <!-- Carpool icon SVG -->
-          <svg height="42" width="42" viewBox="0 0 42 42" fill="none">
-            <rect x="5" y="17" width="32" height="14" rx="7" fill="#e7eeff"/>
-            <rect x="13" y="10" width="16" height="12" rx="6" fill="#5e7cff"/>
-            <circle cx="14" cy="32" r="4" fill="#fff"/>
-            <circle cx="30" cy="32" r="4" fill="#fff"/>
-          </svg>
-          <h3>Carpool & Rides</h3>
-          <p>Coordinate rides, offer seats, and save money together.</p>
-        </div>
-        <div class="feature-card">
-          <!-- Trust icon SVG -->
-          <svg height="42" width="42" viewBox="0 0 42 42" fill="none">
-            <circle cx="21" cy="21" r="19" fill="#e7eeff"/>
-            <path d="M14 24l5 5 9-12" stroke="#5e7cff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <h3>Reliability Scores</h3>
-          <p>Know who’s reliable—plan with people you trust.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="testimonials" id="testimonials">
-      <h2>What People Are Saying</h2>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <p>“Finally, an app that makes spontaneous plans actually happen. I use TapInn almost every weekend.”</p>
-          <span>- Jamie L.</span>
-        </div>
-        <div class="testimonial-card">
-          <p>“The carpool feature is genius. Our group never has to worry about rides again.”</p>
-          <span>- Priya S.</span>
-        </div>
-        <div class="testimonial-card">
-          <p>“I’ve met so many new friends through open events. TapInn is a must-have!”</p>
-          <span>- Chris M.</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="faq" id="faq">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-grid">
-        <details>
-          <summary>Is TapInn free to use?</summary>
-          <div>Yes! TapInn is free to download and use for everyone.</div>
-        </details>
-        <details>
-          <summary>Do my friends need the app to get invites?</summary>
-          <div>No. You can invite anyone using their phone number—they’ll get a text with your event details.</div>
-        </details>
-        <details>
-          <summary>What platforms is TapInn available on?</summary>
-          <div>TapInn will be available on both iOS and Android at launch.</div>
-        </details>
-        <details>
-          <summary>How do reliability scores work?</summary>
-          <div>Reliability is earned by showing up! Frequent cancellations or no-shows lower your score, while attending events keeps it high.</div>
-        </details>
-      </div>
-    </section>
-
-    <section class="get-app" id="join">
-      <h2>Be The First To Tap In</h2>
-      <p>
-        TapInn is launching soon on iOS and Android. Join our waitlist for early access and updates!
-      </p>
-      <form class="waitlist-form">
-        <input type="email" placeholder="Your email" required>
-        <button type="submit">Notify Me</button>
-      </form>
-      <div class="app-links">
-        <!-- SVG App Store badges as placeholder -->
-        <svg class="store-badge" width="135" height="42" viewBox="0 0 135 42" fill="none">
-          <rect width="135" height="42" rx="11" fill="#19191A"/>
-          <text x="20" y="27" font-size="18" fill="#fff" font-family="Inter,sans-serif" font-weight="bold">App Store</text>
-        </svg>
-        <svg class="store-badge" width="135" height="42" viewBox="0 0 135 42" fill="none">
-          <rect width="135" height="42" rx="11" fill="#19191A"/>
-          <text x="15" y="27" font-size="18" fill="#fff" font-family="Inter,sans-serif" font-weight="bold">Google Play</text>
+    <div class="hero-card">
+      <div class="tapinn-logo">
+        <!-- SVG calendar/clock icon, TapInn style -->
+        <svg viewBox="0 0 48 48" fill="none">
+          <circle cx="24" cy="24" r="24" fill="#815EFF"/>
+          <rect x="13" y="19" width="22" height="12" rx="6" fill="#fff"/>
+          <rect x="19" y="13" width="10" height="10" rx="5" fill="#B0AFFF"/>
+          <path d="M28 26v-2h-4v4h2a2 2 0 0 0 2-2z" fill="#2979FF"/>
         </svg>
       </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-links">
-        <a href="#about">About</a>
-        <a href="#features">Features</a>
-        <a href="#faq">FAQ</a>
-        <a href="mailto:hello@tapinnapp.com">Contact</a>
-      </div>
-      <div class="footer-social">
-        <!-- SVG Social icons as placeholders -->
-        <a href="#" aria-label="Twitter">
-          <svg height="24" width="24" viewBox="0 0 24 24" fill="#7ae4ff">
-            <circle cx="12" cy="12" r="12" fill="#e7eeff"/>
-            <path d="M19 8.3c-.5.2-1 .4-1.4.4.5-.3.9-.8 1.1-1.3-.5.3-1 .5-1.6.7-.5-.5-1.2-.8-1.9-.8-1.5 0-2.7 1.2-2.7 2.7 0 .2 0 .5.1.7C8.2 10.4 6.1 9.2 4.7 7.4c-.2.4-.3.8-.3 1.2 0 .9.5 1.7 1.2 2.2-.4 0-.7-.1-1-.2v.1c0 1.2.8 2.2 1.9 2.4-.2.1-.4.1-.6.1-.1 0-.2 0-.3-.1.2.7 1 1.3 1.9 1.3-0.7.5-1.6.8-2.5.8-.2 0-.4 0-.5-.1.9.6 2.1 1 3.2 1 3.9 0 6-3.2 6-6v-.3c.4-.3.8-.7 1.1-1.1z"/>
-          </svg>
-        </a>
-        <a href="#" aria-label="Instagram">
-          <svg height="24" width="24" viewBox="0 0 24 24" fill="#7ae4ff">
-            <circle cx="12" cy="12" r="12" fill="#e7eeff"/>
-            <rect x="6" y="6" width="12" height="12" rx="4" fill="#fff"/>
-            <circle cx="12" cy="12" r="3" fill="#7ae4ff"/>
-            <circle cx="16" cy="8" r="1" fill="#5e7cff"/>
-          </svg>
-        </a>
-        <a href="#" aria-label="Facebook">
-          <svg height="24" width="24" viewBox="0 0 24 24" fill="#7ae4ff">
-            <circle cx="12" cy="12" r="12" fill="#e7eeff"/>
-            <rect x="10" y="8" width="2.5" height="8" rx="1.25" fill="#5e7cff"/>
-            <rect x="8.5" y="10.5" width="7" height="2.5" rx="1.25" fill="#5e7cff"/>
-          </svg>
-        </a>
-      </div>
-      <div class="footer-copy">
-        &copy; 2025 TapInn. All rights reserved.
-      </div>
+      <div class="brand-title">TapInn</div>
+      <div class="brand-tagline">Connect. Meet. Tap In.</div>
+      <div class="headline">Welcome to your new way to meet up.</div>
+      <div class="subheadline">Plan, discover, and join real-world events with one tap. Make every meetup effortless.</div>
+      <button class="cta-main">Join the Waitlist</button>
+      <ul class="features-list">
+        <li><span class="icon">🎉</span> <b>Instant events</b> Create or join plans in seconds</li>
+        <li><span class="icon">📍</span> <b>Find your crowd</b> See what's happening nearby</li>
+        <li><span class="icon">🔒</span> <b>Private or public</b> Invite friends or open to all</li>
+        <li><span class="icon">🚗</span> <b>Easy carpool</b> Get there together, stress-free</li>
+      </ul>
     </div>
-  </footer>
+  </main>
+  <div class="footer">
+    Questions or feedback? <a href="mailto:hello@tapinnapp.com">Contact us</a><br>
+    &copy; 2025 TapInn
+  </div>
 </body>
 </html>
