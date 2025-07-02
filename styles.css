@@ -76,8 +76,8 @@ a:hover, a:focus {
   text-decoration: none;
 }
 .logo-bar img {
-  width: 44px;
-  height: 44px;
+  width: 55px;
+  height: 55px;
   border-radius: var(--radius-sm);
   background: #fff;
   object-fit: contain;
@@ -231,8 +231,8 @@ a:hover, a:focus {
   text-align: center;
 }
 .hero-logo-main {
-  width: 108px;
-  height: 108px;
+  width: 120px;
+  height: 120px;
   margin-bottom: 1.4rem;
   background: #fff;
   border-radius: 30px;
