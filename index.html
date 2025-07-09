@@ -12,24 +12,25 @@
   <!-- Navigation -->
   <nav class="navbar glassy-nav">
     <div class="nav-content">
-      <a class="logo-bar" href="/">
+      <a class="logo-bar" href="#home">
         <img src="TapInn Logo.png" alt="Tap Inn Logo" />
       </a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
       </button>
       <div class="nav-links" id="nav-links">
-        <a href="#about-app">About</a>
-        <a href="#features">Features</a>
+        <a href="#home">Home</a>
         <a href="#how">How It Works</a>
+        <a href="#features">Features</a>
         <a href="#testimonials">Testimonials</a>
-        <a href="#waitlist" class="cta-nav">Join Waitlist</a>
+        <a href="#about-app">About Us</a>
+        <a href="#contact" class="cta-nav">Contact Us</a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero-section">
+  <!-- Home/Hero -->
+  <section class="hero-section" id="home">
     <div class="hero-inner">
       <div class="hero-content glassy">
         <img src="TapInn Logo.png" alt="Tap Inn Logo Large" class="hero-logo-main" />
@@ -39,7 +40,7 @@
           Organize or join real-life gatherings with friends, colleagues, or new faces — instantly.<br>
           <span style="font-weight:600;color:#A774E4;">No stress. No waiting. Just real connections.</span>
         </p>
-        <a class="cta-main" href="#waitlist">Join the Waitlist</a>
+        <a class="cta-main" href="#contact">Contact Us</a>
         <div class="store-badges">
           <img src="App Store.png" alt="App Store" />
           <img src="Google Playstore Logo.png" alt="Google Play" />
@@ -55,7 +56,7 @@
 
   <!-- About App / What is Tap Inn? -->
   <section class="about-app-section glassy" id="about-app">
-    <h2 class="section-title">What is Tap Inn</h2>
+    <h2 class="section-title">What is Tap Inn?</h2>
     <div class="about-app-content">
       <p>
         <strong>Tap Inn</strong> is revolutionizing spontaneous socialization by eliminating the friction and uncertainty of organizing real-world gatherings. Designed for today’s fast-paced, hyper-connected lifestyles, Tap Inn provides a seamless, intelligent, and trustworthy platform to coordinate meetups — whether with friends, colleagues, or new connections — at a moment’s notice.
@@ -151,23 +152,6 @@
     <div class="testimonial-arrows">
       <button id="prevTestimonial" aria-label="Previous testimonial">‹</button>
       <button id="nextTestimonial" aria-label="Next testimonial">›</button>
-    </div>
-  </section>
-
-  <!-- Waitlist -->
-  <section class="waitlist-section glassy" id="waitlist">
-    <h2>Be the First to Tap In</h2>
-    <p>
-      Tap Inn launches soon on iOS and Android.<br>
-      Join our waitlist for early access and exclusive perks!
-    </p>
-    <form class="waitlist-form" autocomplete="off" onsubmit="event.preventDefault();alert('Thank you for joining the waitlist!');">
-      <input type="email" placeholder="Your email" required>
-      <button type="submit">Notify Me</button>
-    </form>
-    <div class="waitlist-badges">
-      <img src="App Store.png" alt="App Store" />
-      <img src="Google Playstore Logo.png" alt="Google Play" />
     </div>
   </section>
 
