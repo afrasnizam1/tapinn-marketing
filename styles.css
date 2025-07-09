@@ -316,7 +316,7 @@ a:hover, a:focus {
 .hero-illus {
   flex: 1;
   min-width: 195px;
-  max-width: 4375px;
+  max-width: 385px;
   display: flex;
   align-items: center;
   justify-content: center;
