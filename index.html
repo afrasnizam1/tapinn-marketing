@@ -7,11 +7,18 @@
   heap.load("2039001180");
 </script>
 
-  <script src="https://cdn.amplitude.com/script/AMPLITUDE_API_KEY.js"></script>
+<script src="https://cdn.amplitude.com/script/9045d9084bef736c08bcf03e93237df8.js"></script>
 <script>
   window.amplitude.init('9045d9084bef736c08bcf03e93237df8', {
-    fetchRemoteConfig: true,
-    autocapture: true
+    fetchRemoteConfig: true
+  });
+</script>
+For EU data residency, use:
+<script src="https://cdn.eu.amplitude.com/script/9045d9084bef736c08bcf03e93237df8.js"></script>
+<script>
+  window.amplitude.init('9045d9084bef736c08bcf03e93237df8', {
+    serverZone: 'EU',
+    fetchRemoteConfig: true
   });
 </script>
 
