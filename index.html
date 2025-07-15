@@ -34,6 +34,14 @@
   });
 </script>
 
+<script src="https://cdn.amplitude.com/libs/analytics-browser-2.9.0-min.js.gz"></script>
+<script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.19.3-min.js.gz"></script>
+<script>
+const sessionReplayTracking = window.sessionReplay.plugin();
+window.amplitude.add(sessionReplayTracking);
+window.amplitude.init(9045d9084bef736c08bcf03e93237df8)
+</script>
+
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
